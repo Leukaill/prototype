@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/BPN_Logo_invertiert.svg">
-    <title>BPN Admin panel</title>
+    <title>BPN Programs Admin panel</title>
     <!-- Custom CSS -->
     <link href="assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -172,17 +172,1059 @@
                         <li class="nav-small-cap"><span class="hide-menu">Programs</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
-                                    class="hide-menu">Ongoing Projects </span></a>
+                                    class="hide-menu">Ongoing Programs </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
                                             class="hide-menu"> MCF
                                         </span></a>
                                 </li>
+                                <li class="sidebar-item"><a href="aguka.html" class="sidebar-link"><span
+                 <!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/BPN_Logo_invertiert.svg">
+    <title>BPN Admin Panel</title>
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
+<![endif]-->
+
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <a href="index.html">
+                            <b class="logo-icon">
+                                <!-- Dark Logo icon -->
+                                <img src="assets/images/logo-bpn.png" alt="homepage" class="dark-logo" />
+                                <!-- Light Logo icon -->
+                                <img src="assets/images/logo-bpn.png" alt="homepage" class="light-logo" />
+                            </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+
+                        </a>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
+        
+                        <!-- ============================================================== -->
+  
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <div class="customize-input">
+                                    <select
+                                        class="custom-select form-control bg-white custom-radius custom-shadow border-0">
+                                        <option selected>EN</option>
+                                        <option value="1">GE</option>
+                                    </select>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-right">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <form>
+                                    <div class="customize-input">
+                                        <input class="form-control custom-shadow custom-radius border-0 bg-white"
+                                            type="search" placeholder="Search" aria-label="Search">
+                                        <i class="form-control-icon" data-feather="search"></i>
+                                    </div>
+                                </form>
+                            </a>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/free-user-icon-3297-thumb.png" alt="user" class="rounded-circle"
+                                    width="40">
+                                <span class="ml-2 d-none d-lg-inline-block"><span>Hello,</span> <span
+                                        class="text-dark">Admin</span> <i data-feather="chevron-down"
+                                        class="svg-icon"></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="mail"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Inbox</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Logout</a>
+                                <div class="dropdown-divider"></div>
+                                <div class="pl-4 p-3"><a href="javascript:void(0)" class="btn btn-sm btn-info">View
+                                        Profile</a></div>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Dashboard</span></a></li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Programs</span></li>
+
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link" href="ticket-list.html" aria-expanded="false">
+                                <i data-feather="loader" class="feather-icon"></i>
+                                <span class="hide-menu">Ongoing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link sidebar-link" href="app-chat.html" aria-expanded="false">
+                                <i data-feather="check-circle" class="feather-icon"></i>
+                                <span class="hide-menu">Completed</span>
+                            </a>
+                        </li>
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Others</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                                    class="hide-menu">Forms </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
+                                            class="hide-menu"> Form Inputs
+                                        </span></a>
+                                </li>
                                 <li class="sidebar-item"><a href="form-input-grid.html" class="sidebar-link"><span
-                                            class="hide-menu"> AGUKA
+                                            class="hide-menu"> Form Grids
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="form-checkbox-radio.html" class="sidebar-link"><span
+                                            class="hide-menu"> Checkboxes &
+                                            Radios
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">Tables </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span
+                                            class="hide-menu"> Basic Table
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-dark-basic.html" class="sidebar-link"><span
+                                            class="hide-menu"> Dark Basic Table
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-sizing.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Sizing Table
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-layout-coloured.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Coloured
+                                            Table Layout
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-datatable-basic.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Basic
+                                            Datatables
+                                            Layout
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                                    class="hide-menu">Charts </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="chart-morris.html" class="sidebar-link"><span
+                                            class="hide-menu"> Morris Chart
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="chart-chart-js.html" class="sidebar-link"><span
+                                            class="hide-menu"> ChartJs
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="chart-knob.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Knob Chart
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="box" class="feather-icon"></i><span
+                                    class="hide-menu">UI Elements </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="ui-buttons.html" class="sidebar-link"><span
+                                            class="hide-menu"> Buttons
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ui-modals.html" class="sidebar-link"><span
+                                            class="hide-menu"> Modals </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ui-tab.html" class="sidebar-link"><span
+                                            class="hide-menu"> Tabs </span></a></li>
+                                <li class="sidebar-item"><a href="ui-tooltip-popover.html" class="sidebar-link"><span
+                                            class="hide-menu"> Tooltip &
+                                            Popover</span></a></li>
+                                <li class="sidebar-item"><a href="ui-notification.html" class="sidebar-link"><span
+                                            class="hide-menu">Notification</span></a></li>
+                                <li class="sidebar-item"><a href="ui-progressbar.html" class="sidebar-link"><span
+                                            class="hide-menu">Progressbar</span></a></li>
+                                <li class="sidebar-item"><a href="ui-typography.html" class="sidebar-link"><span
+                                            class="hide-menu">Typography</span></a></li>
+                                <li class="sidebar-item"><a href="ui-bootstrap.html" class="sidebar-link"><span
+                                            class="hide-menu">Bootstrap
+                                            UI</span></a></li>
+                                <li class="sidebar-item"><a href="ui-breadcrumb.html" class="sidebar-link"><span
+                                            class="hide-menu">Breadcrumb</span></a></li>
+                                <li class="sidebar-item"><a href="ui-list-media.html" class="sidebar-link"><span
+                                            class="hide-menu">List
+                                            Media</span></a></li>
+                                <li class="sidebar-item"><a href="ui-grid.html" class="sidebar-link"><span
+                                            class="hide-menu"> Grid </span></a></li>
+                                <li class="sidebar-item"><a href="ui-carousel.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Carousel</span></a></li>
+                                <li class="sidebar-item"><a href="ui-scrollspy.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Scrollspy</span></a></li>
+                                <li class="sidebar-item"><a href="ui-toasts.html" class="sidebar-link"><span
+                                            class="hide-menu"> Toasts</span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ui-spinner.html" class="sidebar-link"><span
+                                            class="hide-menu"> Spinner </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
+                                aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
+                                    class="hide-menu">Cards
+                                </span></a>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
+                                aria-expanded="false"><i data-feather="lock" class="feather-icon"></i><span
+                                    class="hide-menu">Login
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
+                                href="authentication-register1.html" aria-expanded="false"><i data-feather="lock"
+                                    class="feather-icon"></i><span class="hide-menu">Register
+                                </span></a>
+                        </li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
+                                    class="hide-menu">Icons
+                                </span></a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><span
+                                            class="hide-menu"> Fontawesome Icons </span></a></li>
+
+                                <li class="sidebar-item"><a href="icon-simple-lineicon.html" class="sidebar-link"><span
+                                            class="hide-menu"> Simple Line Icons </span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="crosshair" class="feather-icon"></i><span
+                                    class="hide-menu">Multi
+                                    level
+                                    dd</span></a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> item 1.1</span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> item 1.2</span></a>
+                                </li>
+                                <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)"
+                                        aria-expanded="false"><span class="hide-menu">Menu 1.3</span></a>
+                                    <ul aria-expanded="false" class="collapse second-level base-level-line">
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.1</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.2</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.3</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.4</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> item
+                                            1.4</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs/docs.html"
+                                aria-expanded="false"><i data-feather="edit-3" class="feather-icon"></i><span
+                                    class="hide-menu">Documentation</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
+                                aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
+                                    class="hide-menu">Logout</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- CONTAINER -->
+            <!-- ============================================================== -->
+
+
+
+
+
+
+
+
+            <style>
+                .progress-container {
+                  margin: 24px 24px 24px 20px;
+                  padding: 25px;
+                  background: white;
+                  border-radius: 10px;
+                  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+                }
+            
+                .header {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 20px;
+                }
+            
+                .title {
+                  font-size: 1.5rem;
+                  color: #2c3e50;
+                  font-weight: 500;
+                }
+            
+                .dropdown-btn {
+                  padding: 8px 15px;
+                  background: #4e73df;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: background 0.3s;
+                }
+            
+                .dropdown-btn:hover {
+                  background: #2e59d9;
+                }
+            
+                .graphs-container {
+                  display: none;
+                  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                  gap: 20px;
+                  padding: 20px 0;
+                }
+            
+                .graph-item {
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 15px;
+                  border-radius: 10px;
+                  background: #f8f9fc;
+                  transition: transform 0.3s, box-shadow 0.3s;
+                }
+            
+                .graph-item:hover {
+                  transform: translateY(-5px);
+                  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                }
+            
+                .progress-circle {
+                  width: 80px;
+                  height: 80px;
+                  border-radius: 50%;
+                  background: conic-gradient(#4e73df var(--progress), #e0e0e0 0deg);
+                  position: relative;
+                }
+            
+                .progress-circle::before {
+                  content: '';
+                  position: absolute;
+                  width: 60px;
+                  height: 60px;
+                  background: white;
+                  border-radius: 50%;
+                  top: 10px;
+                  left: 10px;
+                }
+            
+                .percentage {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  font-size: 1rem;
+                  font-weight: 500;
+                  color: #2c3e50;
+                }
+            
+                .popup-card {
+                  position: absolute;
+                  top: -80px;
+                  left: 50%;
+                  transform: translateX(-50%) scale(0);
+                  background: white;
+                  padding: 10px 15px;
+                  border-radius: 8px;
+                  box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+                  z-index: 100;
+                  transition: transform 0.3s;
+                  pointer-events: none;
+                }
+            
+                .graph-item:hover .popup-card {
+                  transform: translateX(-50%) scale(1);
+                }
+            
+                .show {
+                  display: grid !important;
+                }
+              </style>
+            </head>
+            <body>
+              <div class="progress-container">
+                <div class="header">
+                  <h2 class="title">Project Progress Overview</h2>
+                  <button class="dropdown-btn" onclick="toggleGraphs()">Show Graphs</button>
+                </div>
+                <div class="graphs-container" id="graphsContainer">
+                  <!-- Graphs will be dynamically added here -->
+                </div>
+              </div>
+            
+              <script>
+                function toggleGraphs() {
+                  const container = document.getElementById('graphsContainer');
+                  container.classList.toggle('show');
+                  const btn = document.querySelector('.dropdown-btn');
+                  btn.textContent = container.classList.contains('show') ? 'Hide Graphs' : 'Show Graphs';
+                }
+            
+                // Generate graph items
+                const graphsContainer = document.getElementById('graphsContainer');
+                const projectNames = [
+                  'Website Redesign', 'Mobile App', 'Database Migration', 'Cloud Integration',
+                  'Security Audit', 'UI/UX Update', 'API Development', 'Testing Phase',
+                  'Documentation', 'Performance Optimization', 'Code Review', 'Deployment',
+                  'User Training', 'Bug Fixes', 'Feature Development', 'Analytics Integration',
+                  'Content Migration', 'SEO Optimization', 'Payment Gateway', 'Email System',
+                  'Chat Integration', 'Data Backup', 'Load Testing'
+                ];
+            
+                projectNames.forEach((name, index) => {
+                  const progress = Math.floor(Math.random() * 100);
+                  const graphItem = document.createElement('div');
+                  graphItem.className = 'graph-item';
+                  graphItem.innerHTML = `
+                    <div class="progress-circle" style="--progress: ${progress}%">
+                      <span class="percentage">${progress}%</span>
+                    </div>
+                    <div class="popup-card">
+                      <strong>${name}</strong>
+                      <p>Progress: ${progress}%</p>
+                    </div>
+                  `;
+                  graphsContainer.appendChild(graphItem);
+                });
+              </script>
+
+<!-- ============================================================== -->
+                <!-- CONTAINER TWO -->
+                
+                <style>
+                    .embedded-container {
+                      margin: 24px 24px 24px 20px;
+                      padding: 25px;
+                      background: white;
+                      border-radius: 10px;
+                      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+                    }
+                
+                    .header {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-bottom: 20px;
+                    }
+                
+                    .title {
+                      font-size: 1.5rem;
+                      color: #2c3e50;
+                      font-weight: 500;
+                    }
+                
+                    .iframe-container {
+                      position: relative;
+                      transition: all 0.3s ease;
+                      display: none;
+                    }
+                
+                    .iframe-container.show {
+                      display: block;
+                      animation: fadeIn 0.3s ease-in-out;
+                    }
+                
+                    .iframe-container.expanded {
+                      position: fixed;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      width: 90vw;
+                      height: 90vh;
+                      z-index: 1000;
+                      background: white;
+                      padding: 20px;
+                      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+                      border-radius: 10px;
+                    }
+                
+                    .iframe-wrapper {
+                      position: relative;
+                      padding-bottom: 56.25%;
+                      height: 0;
+                      overflow: hidden;
+                    }
+                
+                    .iframe-container.expanded .iframe-wrapper {
+                      padding-bottom: 90%;
+                    }
+                
+                    iframe {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      border: 1px solid #e0e0e0;
+                      border-radius: 8px;
+                    }
+                
+                    .action-btn {
+                      padding: 8px 15px;
+                      background: #4e73df;
+                      color: white;
+                      border: none;
+                      border-radius: 5px;
+                      cursor: pointer;
+                      transition: background 0.3s;
+                    }
+                
+                    .action-btn:hover {
+                      background: #2e59d9;
+                    }
+                
+                    .expand-btn {
+                      display: none;
+                      margin-left: 10px;
+                    }
+                
+                    .overlay {
+                      display: none;
+                      position: fixed;
+                      top: 0;
+                      left: 0;
+                      right: 0;
+                      bottom: 0;
+                      background: rgba(0,0,0,0.5);
+                      z-index: 999;
+                    }
+                
+                    .overlay.active {
+                      display: block;
+                    }
+                
+                    .close-btn {
+                      display: none;
+                      position: absolute;
+                      top: -40px;
+                      right: 0;
+                      padding: 8px 15px;
+                      background: #dc3545;
+                      color: white;
+                      border: none;
+                      border-radius: 5px;
+                      cursor: pointer;
+                      transition: background 0.3s;
+                    }
+                
+                    .close-btn:hover {
+                      background: #c82333;
+                    }
+                
+                    .iframe-container.expanded .close-btn {
+                      display: block;
+                    }
+                
+                    @keyframes fadeIn {
+                      from { opacity: 0; }
+                      to { opacity: 1; }
+                    }
+                  </style>
+                </head>
+                <body>
+                  <div class="embedded-container">
+                    <div class="header">
+                      <h2 class="title">MCF Data Table</h2>
+                      <div>
+                        <button class="action-btn show-btn" id="showBtn" onclick="toggleIframe()">Show Table</button>
+                        <button class="action-btn expand-btn" id="expandBtn" onclick="toggleExpand()">Expand Table</button>
+                      </div>
+                    </div>
+                    <div class="iframe-container" id="iframeContainer">
+                      <button class="close-btn" onclick="toggleExpand()">Close</button>
+                      <div class="iframe-wrapper">
+                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS4oVJLPlw611DYt11GOgYNWHXJsFBIRTIhJ1DAiJIQmEkBIzKr1AaS-p1r_mN8hQ/pubhtml?gid=1045655631&amp;single=true&amp;widget=true&amp;headers=false" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="overlay" id="overlay"></div>
+                
+                  <script>
+                    function toggleIframe() {
+                      const container = document.getElementById('iframeContainer');
+                      const showBtn = document.getElementById('showBtn');
+                      const expandBtn = document.getElementById('expandBtn');
+                      
+                      container.classList.toggle('show');
+                      showBtn.textContent = container.classList.contains('show') ? 'Hide Table' : 'Show Table';
+                      expandBtn.style.display = container.classList.contains('show') ? 'inline-block' : 'none';
+                    }
+                
+                    function toggleExpand() {
+                      const container = document.getElementById('iframeContainer');
+                      const overlay = document.getElementById('overlay');
+                      const expandBtn = document.getElementById('expandBtn');
+                      const showBtn = document.getElementById('showBtn');
+                      
+                      container.classList.toggle('expanded');
+                      overlay.classList.toggle('active');
+                      
+                      if (container.classList.contains('expanded')) {
+                        expandBtn.style.display = 'none';
+                        showBtn.style.display = 'none';
+                        document.body.style.overflow = 'hidden';
+                      } else {
+                        expandBtn.style.display = 'inline-block';
+                        showBtn.style.display = 'inline-block';
+                        document.body.style.overflow = 'auto';
+                      }
+                    }
+                
+                    // Close expanded view when clicking overlay
+                    document.getElementById('overlay').addEventListener('click', function() {
+                      if (document.getElementById('iframeContainer').classList.contains('expanded')) {
+                        toggleExpand();
+                      }
+                    });
+                
+                    // Close expanded view when pressing ESC key
+                    document.addEventListener('keydown', function(event) {
+                      if (event.key === 'Escape' && document.getElementById('iframeContainer').classList.contains('expanded')) {
+                        toggleExpand();
+                      }
+                    });
+                  </script>     
+                
+                
+                <!-- ============================================================== -->
+                <!-- CONTAINER THREE -->
+                <!-- ============================================================== -->
+                
+
+
+                <style>
+                    .charts-container {
+                      margin: 24px 24px 24px 20px;
+                      padding: 25px;
+                      background: white;
+                      border-radius: 10px;
+                      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+                    }
+                    
+                    .charts-grid {
+                      display: none;
+                      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+                      gap: 20px;
+                      padding: 20px 0;
+                    }
+                    
+                    .chart-item {
+                      background: #f8f9fc;
+                      padding: 15px;
+                      border-radius: 10px;
+                      transition: transform 0.3s;
+                    }
+                    
+                    .chart-item:hover {
+                      transform: translateY(-5px);
+                      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                    }
+                    
+                    .show {
+                      display: grid !important;
+                      animation: fadeIn 0.5s ease-in-out;
+                    }
+                    
+                    @keyframes fadeIn {
+                      from { opacity: 0; }
+                      to { opacity: 1; }
+                    }
+                    </style>
+                    
+                    <div class="charts-container">
+                      <div class="header">
+                        <h2 class="title">Analytics Dashboard</h2>
+                        <button class="dropdown-btn" onclick="toggleCharts()">Show Charts</button>
+                      </div>
+                      <div class="charts-grid" id="chartsGrid"></div>
+                    </div>
+                    
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+                    <script>
+                    function toggleCharts() {
+                      const container = document.getElementById('chartsGrid');
+                      container.classList.toggle('show');
+                      const btn = document.querySelector('.dropdown-btn');
+                      btn.textContent = container.classList.contains('show') ? 'Hide Charts' : 'Show Charts';
+                    }
+                    
+                    // Chart configurations
+                    const chartConfigs = [
+                      {
+                        type: 'line',
+                        title: 'Monthly Revenue',
+                        data: {
+                          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                          datasets: [{
+                            label: 'Revenue',
+                            data: [65, 59, 80, 81, 56, 55],
+                            borderColor: '#4e73df',
+                            tension: 0.4
+                          }]
+                        }
+                      },
+                      {
+                        type: 'bar',
+                        title: 'Product Sales',
+                        data: {
+                          labels: ['Product A', 'Product B', 'Product C'],
+                          datasets: [{
+                            label: 'Sales',
+                            data: [300, 450, 280],
+                            backgroundColor: ['#36b9cc', '#1cc88a', '#4e73df']
+                          }]
+                        }
+                      },
+                      {
+                        type: 'scatter',
+                        title: 'Customer Age vs. Spending',
+                        data: {
+                          datasets: [{
+                            label: 'Customers',
+                            data: Array.from({length: 50}, () => ({
+                              x: Math.random() * 50 + 20,
+                              y: Math.random() * 1000
+                            })),
+                            backgroundColor: '#4e73df'
+                          }]
+                        }
+                      },
+                      {
+                        type: 'pie',
+                        title: 'Market Share',
+                        data: {
+                          labels: ['Segment A', 'Segment B', 'Segment C', 'Segment D'],
+                          datasets: [{
+                            data: [30, 25, 25, 20],
+                            backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e']
+                          }]
+                        }
+                      },
+                      {
+                        type: 'bar',
+                        title: 'Monthly Sales',
+                        data: {
+                          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                          datasets: [{
+                            label: 'Sales',
+                            data: [65, 59, 80, 81, 56, 55],
+                            backgroundColor: '#4e73df'
+                          }]
+                        }
+                      },
+                      {
+                        type: 'bubble',
+                        title: 'Project Resources',
+                        data: {
+                          datasets: [{
+                            label: 'Projects',
+                            data: Array.from({length: 15}, () => ({
+                              x: Math.random() * 100,
+                              y: Math.random() * 100,
+                              r: Math.random() * 15
+                            })),
+                            backgroundColor: '#4e73df'
+                          }]
+                        }
+                      },
+                      {
+                        type: 'line',
+                        title: 'Website Traffic',
+                        data: {
+                          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                          datasets: [{
+                            label: 'Visitors',
+                            data: [1500, 2500, 2200, 3000, 2800, 3500],
+                            fill: true,
+                            backgroundColor: 'rgba(78, 115, 223, 0.1)',
+                            borderColor: '#4e73df'
+                          }]
+                        }
+                      },
+                      {
+                        type: 'radar',
+                        title: 'Skill Assessment',
+                        data: {
+                          labels: ['Coding', 'Design', 'Marketing', 'Sales', 'Support'],
+                          datasets: [{
+                            label: 'Team A',
+                            data: [85, 75, 90, 80, 95],
+                            backgroundColor: 'rgba(78, 115, 223, 0.2)',
+                            borderColor: '#4e73df'
+                          }]
+                        }
+                      }
+                    ];
+                    
+                    // Generate remaining chart configs
+                    const additionalTypes = ['line', 'bar', 'pie', 'doughnut', 'polarArea', 'radar', 'scatter', 'bubble'];
+                    for(let i = chartConfigs.length; i < 23; i++) {
+                      const type = additionalTypes[i % additionalTypes.length];
+                      chartConfigs.push({
+                        type,
+                        title: `Analytics ${i + 1}`,
+                        data: {
+                          labels: ['A', 'B', 'C', 'D', 'E', 'F'],
+                          datasets: [{
+                            label: 'Data',
+                            data: Array.from({length: 6}, () => Math.floor(Math.random() * 100)),
+                            backgroundColor: '#4e73df',
+                            borderColor: '#4e73df'
+                          }]
+                        }
+                      });
+                    }
+                    
+                    // Create and render charts
+                    const chartsGrid = document.getElementById('chartsGrid');
+                    
+                    chartConfigs.forEach((config, index) => {
+                      const chartDiv = document.createElement('div');
+                      chartDiv.className = 'chart-item';
+                      
+                      const canvas = document.createElement('canvas');
+                      canvas.id = `chart${index}`;
+                      chartDiv.appendChild(canvas);
+                      chartsGrid.appendChild(chartDiv);
+                    
+                      new Chart(canvas, {
+                        type: config.type,
+                        data: config.data,
+                        options: {
+                          responsive: true,
+                          animation: {
+                            duration: 2000,
+                            easing: 'easeInOutQuart'
+                          },
+                          plugins: {
+                            title: {
+                              display: true,
+                              text: config.title,
+                              font: {
+                                size: 16,
+                                weight: 'bold'
+                              }
+                            },
+                            legend: {
+                              position: 'bottom'
+                            }
+                          }
+                        }
+                      });
+                    });
+                    </script>
+
+
+
+
+
+
+
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center">
+                Straight from  <a
+                    href="https://bpn.com">BPN Offices</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <div class="chat-windows "></div>
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js "></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js "></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js "></script>
+    <!-- apps -->
+    <script src="dist/js/app.min.js "></script>
+    <script src="dist/js/app.init-menusidebar.js"></script>
+    <script src="dist/js/app-style-switcher.js "></script>
+    <script src="dist/js/feather.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js "></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js "></script>
+    <!-- theme js -->
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js "></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js "></script>
+</body>
+
+</html>                           class="hide-menu"> AGUKA
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="I-acc.html" class="sidebar-link"><span
                                             class="hide-menu"> I-ACC
                                             
                                         </span></a>
@@ -191,36 +1233,38 @@
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
-                                    class="hide-menu">Completed Projects </span></a>
+                                    class="hide-menu">Completed Programs </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu"> MCF
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="table-dark-basic.html" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu"> AGUKA
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="table-sizing.html" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu">
                                             I-ACC
                                         </span></a>
-                                </li>                                </li>
+                                </li> 
+                            </li>
+                            
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
                                     class="hide-menu">Forms </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="chart-morris.html" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu"> MCF
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="chart-chart-js.html" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu"> AGUKA
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="chart-knob.html" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu">
                                             I-ACC
                                         </span></a>
