@@ -1,4 +1,5 @@
 //gulpfile.js
+// biome-ignore lint/style/useSingleVarDeclarator: <explanation>
 const gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
@@ -7,8 +8,8 @@ const gulp = require('gulp'),
     npmDist = require('gulp-npm-dist'),
     browserSync = require('browser-sync').create();
 
-const sassFiles = 'scss/*.scss',
-    cssDest = 'dist/css/';
+const sassFiles = 'scss/*.scss';
+const cssDest = 'dist/css/';
 
 //compile scss into css
 function style() {

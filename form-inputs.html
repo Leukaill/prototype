@@ -557,7 +557,7 @@
               </button>
 
 
-              <button class="action-btn expand-btn" id="expandBtn" onclick="toggleExpand()">Expand Table</button>
+              <button class="action-btn expand-btn" id="expandBtn" onclick="toggleExpand()">Expand</button>
 
             </div>
 
@@ -583,7 +583,10 @@
             const expandBtn = document.getElementById('expandBtn');
 
             container.classList.toggle('show');
-            showBtn.textContent = container.classList.contains('show') ? 'Hide Table' : 'Show Table';
+            showBtn.innerHTML = container.classList.contains('show') 
+    ? 'Close'  // Keep "Close" as text
+    : '<i class="fa fa-chevron-down"></i>';  // Replace "Open" with an icon
+
             expandBtn.style.display = container.classList.contains('show') ? 'inline-block' : 'none';
           }
 
@@ -702,7 +705,7 @@
           }
 
           .section-content.expanded {
-            max-height: 500px;
+            max-height: max-content;
             padding: 20px;
             margin-top: 10px;
             border: 1px solid #e3e6f0;
@@ -1226,7 +1229,6 @@
               </div>
               <div class="section-content">
 
-                <!-- please put the here -->
                 <style>
                   .charts-grid {
                     display: grid;
@@ -1240,6 +1242,7 @@
                     padding: 20px;
                     border-radius: 8px;
                     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    transition: transform 0.3s;
                   }
                 
                   .chart-box:hover {
@@ -1312,15 +1315,6 @@
                     animation: pieRotate 1.5s ease-in-out;
                   }
                 
-                  @keyframes pieRotate {
-                    0% {
-                      transform: rotate(0deg);
-                    }
-                    100% {
-                      transform: rotate(360deg);
-                    }
-                  }
-                
                   .line-chart {
                     height: 200px;
                     position: relative;
@@ -1349,8 +1343,27 @@
                     animation: dotBounce 1s ease-in-out infinite alternate;
                   }
                 
+                  @keyframes lineDraw {
+                    0% {
+                      stroke-dashoffset: 4;
+                    }
+                    100% {
+                      stroke-dashoffset: 0;
+                    }
+                  }
                 
+                  @keyframes dotBounce {
+                    0% {
+                      transform: translate(-50%, -50%) scale(1);
+                    }
+                    100% {
+                      transform: translate(-50%, -50%) scale(1.3);
+                    }
+                  }
                 
+                  .chart-box:hover .pie-chart {
+                    animation: pieRotate 2s ease-in-out infinite;
+                  }
                 </style>
                 
                 <div class="charts-grid">
@@ -1483,7 +1496,6 @@
                   </div>
                 </div>
                 
-
               </div>
             </div>
           </div>

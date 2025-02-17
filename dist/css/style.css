@@ -80,7 +80,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #7c8798;
+  color: #000000;
   text-align: left;
   background-color: #f9fbfd; }
 
@@ -201,7 +201,7 @@ table {
 caption {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: #9eabc0;
+  color: #000000;
   text-align: left;
   caption-side: bottom; }
 
@@ -7444,6 +7444,7 @@ a.text-purple:hover, a.text-purple:focus {
   color: rgba(255, 255, 255, 0.5) !important; }
 
 .text-hide {
+  /* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -8721,6 +8722,7 @@ strong {
   .ps-container {
     overflow: auto !important; } }
 
+/* biome-ignore lint/correctness/noUnknownMediaFeatureName: <explanation> */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .ps-container {
     overflow: auto !important; } }
