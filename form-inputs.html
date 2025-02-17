@@ -770,20 +770,360 @@
                             <span class="arrow"></span>
                           </div>
                           <div class="section-content">
-                            <!-- <div class="metrics-grid">
-                              <div class="metric-card">
-                                <div class="metric-value">$124,750</div>
-                                <div class="metric-label">Total Revenue</div>
+                            <div class="chart-grid">
+                              <!-- 1. Youths who participated in trainings -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Youths who participated in trainings</h4>
+                                <canvas id="youthParticipationChart"></canvas>
                               </div>
-                              <div class="metric-card">
-                                <div class="metric-value">+12.5%</div>
-                                <div class="metric-label">Growth Rate</div>
+                            
+                              <!-- 2. Non-youths who participated in trainings -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Non-youths who participated in trainings</h4>
+                                <canvas id="nonYouthParticipationChart"></canvas>
                               </div>
-                              <div class="metric-card">
-                                <div class="metric-value">891</div>
-                                <div class="metric-label">Total Sales</div>
+                            
+                              <!-- 3. Youths who completed trainings -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Youths who completed trainings</h4>
+                                <canvas id="youthCompletionChart"></canvas>
                               </div>
-                            </div> -->
+                            
+                              <!-- 4. Non-youths who completed trainings -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Non-youths who completed trainings</h4>
+                                <canvas id="nonYouthCompletionChart"></canvas>
+                              </div>
+                            
+                              <!-- 5. Quality, usefulness and relevance of trainings -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Quality, usefulness and relevance of trainings</h4>
+                                <canvas id="trainingQualityChart"></canvas>
+                              </div>
+                            
+                              <!-- 6. Enterprises accessing BDS -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Enterprises accessing BDS</h4>
+                                <canvas id="bdsAccessChart"></canvas>
+                              </div>
+                            
+                              <!-- 7. Non-financial/services offered -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Non-financial/services offered</h4>
+                                <canvas id="nonFinancialServicesChart"></canvas>
+                              </div>
+                            
+                              <!-- 8. Enterprises accessing financial products/services -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Enterprises accessing financial products/services</h4>
+                                <canvas id="financialAccessChart"></canvas>
+                              </div>
+                            
+                              <!-- 9. Financial products and services offered -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Financial products and services offered</h4>
+                                <canvas id="financialProductsChart"></canvas>
+                              </div>
+                            
+                              <!-- 10. Value of financial products received -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Value of financial products received</h4>
+                                <canvas id="financialValueChart"></canvas>
+                              </div>
+                            
+                              <!-- 11. Quality metrics of support -->
+                              <div class="chart-container">
+                                <h4 class="chart-title">Quality metrics of support services</h4>
+                                <canvas id="supportQualityChart"></canvas>
+                              </div>
+                            </div>
+                            
+                            <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                              // Common configuration
+                              const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+                              
+                              const commonOptions = {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                plugins: {
+                                  legend: {
+                                    position: 'bottom',
+                                    labels: {
+                                      boxWidth: 12,
+                                      padding: 15,
+                                      font: { size: 11 }
+                                    }
+                                  }
+                                },
+                                scales: {
+                                  y: { 
+                                    beginAtZero: true,
+                                    ticks: { font: { size: 10 } }
+                                  },
+                                  x: { 
+                                    ticks: { font: { size: 10 } }
+                                  }
+                                }
+                              };
+                            
+                              // Sample data (replace with actual data)
+                              const data = {
+                                youthParticipation: [75, 82, 88, 95, 91, 89],
+                                nonYouthParticipation: [65, 70, 75, 78, 82, 80],
+                                youthCompletion: [70, 75, 82, 88, 85, 84],
+                                nonYouthCompletion: [60, 65, 70, 73, 75, 74],
+                                trainingQuality: {
+                                  quality: [85, 87, 88, 90, 92, 91],
+                                  usefulness: [82, 84, 86, 88, 90, 89],
+                                  relevance: [83, 85, 87, 89, 91, 90]
+                                },
+                                bdsAccess: [45, 50, 55, 60, 65, 68],
+                                nonFinancialServices: {
+                                  training: [40, 45, 50, 55, 58, 60],
+                                  consulting: [35, 40, 45, 50, 53, 55],
+                                  mentoring: [30, 35, 40, 45, 48, 50]
+                                },
+                                financialAccess: [35, 40, 45, 50, 55, 58],
+                                financialProducts: {
+                                  loans: [30, 35, 40, 45, 48, 50],
+                                  grants: [25, 30, 35, 40, 43, 45],
+                                  investments: [20, 25, 30, 35, 38, 40]
+                                },
+                                financialValue: [250000, 300000, 350000, 400000, 450000, 500000],
+                                supportQuality: {
+                                  quality: [88, 85, 90, 82, 87, 89],
+                                  usefulness: [86, 83, 88, 80, 85, 87],
+                                  relevance: [87, 84, 89, 81, 86, 88],
+                                  affordability: [85, 82, 87, 79, 84, 86],
+                                  accessibility: [84, 81, 86, 78, 83, 85]
+                                }
+                              };
+                            
+                              // 1. Youth Participation Chart
+                              new Chart(document.getElementById('youthParticipationChart'), {
+                                type: 'line',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'Youth Participation Rate',
+                                    data: data.youthParticipation,
+                                    borderColor: '#4e73df',
+                                    backgroundColor: '#4e73df20',
+                                    tension: 0.1,
+                                    fill: true
+                                  }]
+                                },
+                                options: commonOptions
+                              });
+                            
+                              // 2. Non-Youth Participation Chart
+                              new Chart(document.getElementById('nonYouthParticipationChart'), {
+                                type: 'line',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'Non-Youth Participation Rate',
+                                    data: data.nonYouthParticipation,
+                                    borderColor: '#1cc88a',
+                                    backgroundColor: '#1cc88a20',
+                                    tension: 0.1,
+                                    fill: true
+                                  }]
+                                },
+                                options: commonOptions
+                              });
+                            
+                              // 3. Youth Completion Chart
+                              new Chart(document.getElementById('youthCompletionChart'), {
+                                type: 'bar',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'Youth Completion Rate',
+                                    data: data.youthCompletion,
+                                    backgroundColor: '#4e73df'
+                                  }]
+                                },
+                                options: commonOptions
+                              });
+                            
+                              // 4. Non-Youth Completion Chart
+                              new Chart(document.getElementById('nonYouthCompletionChart'), {
+                                type: 'bar',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'Non-Youth Completion Rate',
+                                    data: data.nonYouthCompletion,
+                                    backgroundColor: '#1cc88a'
+                                  }]
+                                },
+                                options: commonOptions
+                              });
+                            
+                              // 5. Training Quality Chart
+                              new Chart(document.getElementById('trainingQualityChart'), {
+                                type: 'radar',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'Quality',
+                                    data: data.trainingQuality.quality,
+                                    borderColor: '#4e73df',
+                                    backgroundColor: '#4e73df20'
+                                  }, {
+                                    label: 'Usefulness',
+                                    data: data.trainingQuality.usefulness,
+                                    borderColor: '#1cc88a',
+                                    backgroundColor: '#1cc88a20'
+                                  }, {
+                                    label: 'Relevance',
+                                    data: data.trainingQuality.relevance,
+                                    borderColor: '#36b9cc',
+                                    backgroundColor: '#36b9cc20'
+                                  }]
+                                },
+                                options: commonOptions
+                              });
+                            
+                              // 6. BDS Access Chart
+                              new Chart(document.getElementById('bdsAccessChart'), {
+                                type: 'line',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'BDS Access Rate',
+                                    data: data.bdsAccess,
+                                    borderColor: '#4e73df',
+                                    backgroundColor: '#4e73df20',
+                                    tension: 0.1,
+                                    fill: true
+                                  }]
+                                },
+                                options: commonOptions
+                              });
+                            
+                              // 7. Non-Financial Services Chart
+                              new Chart(document.getElementById('nonFinancialServicesChart'), {
+                                type: 'bar',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'Training',
+                                    data: data.nonFinancialServices.training,
+                                    backgroundColor: '#4e73df'
+                                  }, {
+                                    label: 'Consulting',
+                                    data: data.nonFinancialServices.consulting,
+                                    backgroundColor: '#1cc88a'
+                                  }, {
+                                    label: 'Mentoring',
+                                    data: data.nonFinancialServices.mentoring,
+                                    backgroundColor: '#36b9cc'
+                                  }]
+                                },
+                                options: commonOptions
+                              });
+                            
+                              // 8. Financial Access Chart
+                              new Chart(document.getElementById('financialAccessChart'), {
+                                type: 'line',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'Financial Access Rate',
+                                    data: data.financialAccess,
+                                    borderColor: '#4e73df',
+                                    backgroundColor: '#4e73df20',
+                                    tension: 0.1,
+                                    fill: true
+                                  }]
+                                },
+                                options: commonOptions
+                              });
+                            
+                              // 9. Financial Products Chart
+                              new Chart(document.getElementById('financialProductsChart'), {
+                                type: 'bar',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'Loans',
+                                    data: data.financialProducts.loans,
+                                    backgroundColor: '#4e73df'
+                                  }, {
+                                    label: 'Grants',
+                                    data: data.financialProducts.grants,
+                                    backgroundColor: '#1cc88a'
+                                  }, {
+                                    label: 'Investments',
+                                    data: data.financialProducts.investments,
+                                    backgroundColor: '#36b9cc'
+                                  }]
+                                },
+                                options: commonOptions
+                              });
+                            
+                              // 10. Financial Value Chart
+                              new Chart(document.getElementById('financialValueChart'), {
+                                type: 'line',
+                                data: {
+                                  labels: months,
+                                  datasets: [{
+                                    label: 'Financial Value',
+                                    data: data.financialValue,
+                                    borderColor: '#4e73df',
+                                    backgroundColor: '#4e73df20',
+                                    tension: 0.1,
+                                    fill: true
+                                  }]
+                                },
+                                options: {
+                                  ...commonOptions,
+                                  scales: {
+                                    y: {
+                                      beginAtZero: true,
+                                      ticks: {
+                                        callback: function(value) {
+                                          return '$' + value.toLocaleString();
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              });
+                            
+                              // 11. Support Quality Chart
+                              new Chart(document.getElementById('supportQualityChart'), {
+                                type: 'radar',
+                                data: {
+                                  labels: ['Quality', 'Usefulness', 'Relevance', 'Affordability', 'Accessibility'],
+                                  datasets: [{
+                                    label: 'Current Month',
+                                    data: [
+                                      data.supportQuality.quality[5],
+                                      data.supportQuality.usefulness[5],
+                                      data.supportQuality.relevance[5],
+                                      data.supportQuality.affordability[5],
+                                      data.supportQuality.accessibility[5]
+                                    ],
+                                    backgroundColor: '#4e73df40',
+                                    borderColor: '#4e73df'
+                                  }]
+                                },
+                                options: {
+                                  ...commonOptions,
+                                  scales: {
+                                    r: {
+                                      beginAtZero: true,
+                                      max: 100
+                                    }
+                                  }
+                                }
+                              });
+                            });
+                            </script>
                           </div>
                         </div>
                     
@@ -793,7 +1133,94 @@
                             <span class="arrow"></span>
                           </div>
                           <div class="section-content">
-            
+                            <style>
+  .chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .chart-container {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 350px;
+    width: 100%;
+    position: relative;
+  }
+
+  .chart-title {
+    margin-bottom: 15px;
+    color: #4e73df;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+  }
+</style>
+
+<div class="chart-grid">
+  <!-- Chart 1: Youths who demonstrate improved learning outcome or skill acquisitions -->
+  <div class="chart-container">
+    <h4 class="chart-title">Youths who demonstrate improved learning outcome or skill acquisitions</h4>
+    <canvas id="youthLearningChart"></canvas>
+  </div>
+
+  <!-- Chart 2: Non-youths who demonstrate improved learning outcome or skill acquisitions -->
+  <div class="chart-container">
+    <h4 class="chart-title">Non-youths who demonstrate improved learning outcome or skill acquisitions</h4>
+    <canvas id="nonYouthLearningChart"></canvas>
+  </div>
+
+  <!-- Chart 3: Enterprise capacity development -->
+  <div class="chart-container">
+    <h4 class="chart-title">Enterprise capacity development</h4>
+    <canvas id="enterpriseCapacityChart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+  const randomData = () => Array.from({length: 6}, () => Math.floor(Math.random() * 40) + 40);
+  
+  const commonOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: {
+          boxWidth: 12,
+          padding: 15,
+          font: { size: 11 }
+        }
+      }
+    },
+    scales: {
+      y: { beginAtZero: true, ticks: { font: { size: 10 } } },
+      x: { ticks: { font: { size: 10 } } }
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    function createChart(id, type, label, color, data) {
+      const ctx = document.getElementById(id);
+      return new Chart(ctx, {
+        type: type,
+        data: { labels: months, datasets: [{ label: label, data: data, borderColor: color, backgroundColor: color, tension: 0.1 }] },
+        options: commonOptions
+      });
+    }
+    
+    createChart('youthLearningChart', 'line', 'Youth Learning (%)', '#4e73df', randomData());
+    createChart('nonYouthLearningChart', 'bar', 'Non-Youth Learning (%)', '#1cc88a', randomData());
+    createChart('enterpriseCapacityChart', 'line', 'Enterprise Capacity (%)', '#36b9cc', randomData());
+  });
+</script>
+
                           </div>
                         </div>
                     
