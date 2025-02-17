@@ -1,4 +1,5 @@
-$(function () {
+$(() => {
+    // biome-ignore lint/suspicious/noRedundantUseStrict: <explanation>
     "use strict";
 
     // Feather Icon Init Js
@@ -7,7 +8,7 @@ $(function () {
     $(".preloader").fadeOut();
 
     // this is for close icon when navigation open in mobile view
-    $(".nav-toggler").on('click', function () {
+    $(".nav-toggler").on('click', () => {
         $("#main-wrapper").toggleClass("show-sidebar");
         $(".nav-toggler i").toggleClass("ti-menu");
     });
@@ -15,8 +16,8 @@ $(function () {
     // ==============================================================
     // Right sidebar options
     // ==============================================================
-    $(function () {
-        $(".service-panel-toggle").on('click', function () {
+    $(() => {
+        $(".service-panel-toggle").on('click', () => {
             $(".customizer").toggleClass('show-service-panel');
 
         });
