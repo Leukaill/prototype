@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/BPN_Logo_invertiert.svg">
-    <title>BPN Projects</title>
+    <title>BPN Programs</title>
     <!-- Custom CSS -->
     <link href="assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -28,6 +28,15 @@
 <![endif]-->
 </head>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    setInterval(function() {
+      document.querySelector("iframe").src += "";
+    }, 5000); // Refresh every 5 seconds
+  </script>
+  
+
+
 <body>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
@@ -173,53 +182,53 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
+                        <li  class="sidebar-item"> <a  class="sidebar-link sidebar-link" href="index.html"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                                    class="hide-menu">Dashboard</span></a></li>
+                                    class="hide-menu"><strong>Dashboard</strong></span></a></li>
                         <li class="list-divider"></li>
                         
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu"><strong>Programs</strong></span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
-                                    class="hide-menu"><strong>Ongoing Programs</strong> </span></a>
+                                aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon" style="color: blue; text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);"></i>                            </i><span
+                                    class="hide-menu"><strong><font color="#222">Ongoing Programs</font></strong> </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
-                                            class="hide-menu"> MCF
+                                            class="hide-menu"> <font color="#222"><strong>MCF</strong></font>
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="aguka.html" class="sidebar-link"><span
-                                            class="hide-menu"> AGUKA
+                                            class="hide-menu"> <font color="#222"><strong>AGUKA</strong></font>
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="I-acc.html" class="sidebar-link"><span
-                                            class="hide-menu"> I-ACC
+                                            class="hide-menu"> <font color="#222"><strong>I-ACC</strong></font>
                                             
                                         </span></a>
                                 </li>
 
                                 <li class="sidebar-item"><a href="core.html" class="sidebar-link"><span
-                                    class="hide-menu"> CORE 
+                                    class="hide-menu"> <font color="#222"><strong>CORE</strong></font>
                                     
                                 </span></a>
                         </li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
-                                    class="hide-menu">Completed Programs </span></a>
+                                aria-expanded="false"><i data-feather="check-circle" class="feather-icon" style="color: green; text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);"></i>                            </i>                            </i><span
+                                    class="hide-menu"><font color="#222"><strong>Completed Programs</strong></font> </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="#" class="sidebar-link"><span
-                                            class="hide-menu"> MCF
+                                            class="hide-menu"> <font color="#222"><strong>MCF</strong></font>
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="#" class="sidebar-link"><span
-                                            class="hide-menu"> AGUKA
+                                            class="hide-menu"> <font color="#222"><strong>AGUKA</strong></font>
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu">
-                                            I-ACC
+                                            <font color="#222"><strong>I-ACC</strong></font>
                                         </span></a>
                                 </li> 
                             </li>
@@ -227,8 +236,8 @@
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
-                                    class="hide-menu">Forms </span></a>
+                                aria-expanded="false"><i data-feather="file-text" class="feather-icon" style="stroke: black; stroke-width: 2; fill: white; filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));"></i>                            </i><span
+                                    class="hide-menu"><font color="#222"><strong>Forms</strong></font> </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <!-- <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu"> MCF
