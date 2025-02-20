@@ -26,15 +26,17 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
 </head>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-    setInterval(function() {
-      document.querySelector("iframe").src += "";
+    setInterval(function () {
+        document.querySelector("iframe").src += "";
     }, 5000); // Refresh every 5 seconds
-  </script>
-  
+</script>
+
 
 
 <body>
@@ -100,22 +102,20 @@
                         <li class="nav-item d-none d-md-block">
                             <a class="nav-link" href="javascript:void(0)">
                                 <div class="customize-input">
-                                    <select
-                                        class="custom-select form-control bg-white custom-radius custom-shadow border-0">
-                                        <option selected>EN</option>
-                                        <option value="1">GE</option>
-                                    </select>
-                                    
+                                    <h4><strong>
+                                            <font color="black">BPN Programs</font>
+                                        </strong> <br><strong>Track of all programs, ongoing and completed</strong></h4>
+
                                 </div>
                             </a>
-                            
+
                         </li>
-              
+
                     </ul>
-                    <span class="badge bg-white text-dark custom-radius custom-shadow border-0" 
-                    style="padding: 15px 30px; font-size: 0.9em; font-weight: 500;">
-                             version 0.1
-              </span>
+                    <span class="badge bg-white text-dark custom-radius custom-shadow border-0"
+                        style="padding: 15px 30px; font-size: 0.9em; font-weight: 500;">
+                        <font color="gray">version 0.1</font>
+                    </span>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
@@ -182,78 +182,90 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li  class="sidebar-item"> <a  class="sidebar-link sidebar-link" href="index.html"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu"><strong>Dashboard</strong></span></a></li>
                         <li class="list-divider"></li>
-                        
+
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu"><strong>Programs</strong></span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon" style="color: blue; text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);"></i>                            </i><span
-                                    class="hide-menu"><strong><font color="#222">Ongoing Programs</font></strong> </span></a>
+                                aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"
+                                    style="color: blue; text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);"></i> </i><span
+                                    class="hide-menu"><strong>
+                                        <font color="#222">Ongoing Programs</font>
+                                    </strong> </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
-                                            class="hide-menu"> <font color="#222"><strong>MCF</strong></font>
+                                            class="hide-menu">
+                                            <font color="#222"><strong>MCF</strong></font>
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="aguka.html" class="sidebar-link"><span
-                                            class="hide-menu"> <font color="#222"><strong>AGUKA</strong></font>
+                                            class="hide-menu">
+                                            <font color="#222"><strong>AGUKA</strong></font>
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="I-acc.html" class="sidebar-link"><span
-                                            class="hide-menu"> <font color="#222"><strong>I-ACC</strong></font>
-                                            
+                                            class="hide-menu">
+                                            <font color="#222"><strong>I-ACC</strong></font>
+
                                         </span></a>
                                 </li>
 
                                 <li class="sidebar-item"><a href="core.html" class="sidebar-link"><span
-                                    class="hide-menu"> <font color="#222"><strong>CORE</strong></font>
-                                    
-                                </span></a>
-                        </li>
+                                            class="hide-menu">
+                                            <font color="#222"><strong>CORE</strong></font>
+
+                                        </span></a>
+                                </li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="check-circle" class="feather-icon" style="color: green; text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);"></i>                            </i>                            </i><span
-                                    class="hide-menu"><font color="#222"><strong>Completed Programs</strong></font> </span></a>
+                                aria-expanded="false"><i data-feather="check-circle" class="feather-icon"
+                                    style="color: green; text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);"></i> </i>
+                                </i><span class="hide-menu">
+                                    <font color="#222"><strong>Completed Programs</strong></font>
+                                </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span
-                                            class="hide-menu"> <font color="#222"><strong>MCF</strong></font>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu">
+                                            <font color="#222"><strong>MCF</strong></font>
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span
-                                            class="hide-menu"> <font color="#222"><strong>AGUKA</strong></font>
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu">
+                                            <font color="#222"><strong>AGUKA</strong></font>
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span
-                                            class="hide-menu">
+                                <li class="sidebar-item"><a href="#" class="sidebar-link"><span class="hide-menu">
                                             <font color="#222"><strong>I-ACC</strong></font>
                                         </span></a>
-                                </li> 
-                            </li>
-                            
-                            </ul>
+                                </li>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="file-text" class="feather-icon" style="stroke: black; stroke-width: 2; fill: white; filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));"></i>                            </i><span
-                                    class="hide-menu"><font color="#222"><strong>Forms</strong></font> </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <!-- <li class="sidebar-item"><a href="#" class="sidebar-link"><span
+
+                    </ul>
+                    </li>
+                    <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                            aria-expanded="false"><i data-feather="file-text" class="feather-icon"
+                                style="stroke: black; stroke-width: 2; fill: white; filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));"></i>
+                            </i><span class="hide-menu">
+                                <font color="#222"><strong>Forms</strong></font>
+                            </span></a>
+                        <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <!-- <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu"> MCF
                                         </span></a>
                                 </li> -->
-                                <!-- <li class="sidebar-item"><a href="#" class="sidebar-link"><span
+                            <!-- <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu"> AGUKA
                                         </span></a>
                                 </li> -->
-                                <!-- <li class="sidebar-item"><a href="#" class="sidebar-link"><span
+                            <!-- <li class="sidebar-item"><a href="#" class="sidebar-link"><span
                                             class="hide-menu">
                                             I-ACC
                                         </span></a>
                                 </li> -->
-                            </ul>
-                        </li>
+                        </ul>
+                    </li>
 
                     </ul>
                 </nav>
@@ -271,23 +283,7 @@
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
-            <div class="page-breadcrumb">
-                <div class="row">
-                    <div class="col-7 align-self-center">
-                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1"><strong> BPN </strong> Projects</h3>
-                        <div class="d-flex align-items-center">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Track of all programs, ongoing and completed</a>
-                                    </li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-5 align-self-center">
-                    </div>
-                </div>
-            </div>
+
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -308,7 +304,8 @@
                                         <span
                                             class="badge bg-primary font-12 text-white font-weight-medium badge-pill ml-2 d-lg-block d-md-none">+0%</span>
                                     </div>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Total Entrepreneurs</h6>
+                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Total
+                                        Entrepreneurs</h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
                                     <span class="opacity-7 text-muted"><i data-feather="user-plus"></i></span>
@@ -322,7 +319,8 @@
                                 <div>
                                     <h2 class="text-dark mb-1 w-100 text-truncate font-weight-medium"><sup
                                             class="set-doller">$</sup>0,00</h2>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Total annual revenues
+                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Total annual
+                                        revenues
                                     </h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
@@ -357,220 +355,219 @@
                 <!-- Start Sales Charts Section -->
                 <!-- *************************************************************** -->
 
-                </div>
-                <!-- *************************************************************** -->
-                <!-- End Sales Charts Section -->
-                <!-- *************************************************************** -->
-                <!-- *************************************************************** -->
-                <!-- Start Location and Earnings Charts Section -->
-                <!-- *************************************************************** -->
-                <div class="row">
-                    <div class="col-md-6 col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start">
-                                    <h4 class="card-title mb-0">Programs Success Statistics</h4>
-                                    <div class="ml-auto">
-                                        <div class="dropdown sub-dropdown">
-                                            <button class="btn btn-link text-muted dropdown-toggle" type="button"
-                                                id="dd1" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false">
-                                                <i data-feather="more-vertical"></i>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
-                                                <a class="dropdown-item" href="#">Insert</a>
-                                                <a class="dropdown-item" href="#">Update</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pl-4 mb-5">
-                                    <div class="stats ct-charts position-relative" style="height: 315px;"></div>
-                                </div>
-                                <ul class="list-inline text-center mt-4 mb-0">
-                                    <li class="list-inline-item text-muted font-italic">Annual success Statistics</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Ongoing programs</h4>
-                                <div class="mt-4 activity">
-                                    <div class="d-flex align-items-start border-left-line pb-3">
-                                        <div>
-                                            <a href="javascript:void(0)" class="btn btn-info btn-circle mb-2 btn-item">
-                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/120px-Mastercard-logo.svg.png" alt="Mastercard Foundation" style="width: 24px; height: 24px;">
-
-                                            </a>
-                                        </div>
-                                        <div class="ml-3 mt-2">
-                                            <h5 class="text-dark font-weight-medium mb-2">MasterCard Foundation</h5>
-                                            <p class="font-14 mb-2 text-muted">Read more information about it
-                                                                                    </p>
-                                            <span class="font-weight-light font-14 text-muted">10 Sessions left</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-start border-left-line pb-3">
-                                        <div>
-                                            <a href="javascript:void(0)"
-                                                class="btn btn-danger btn-circle mb-2 btn-item">
-                                                <img src="assets/images/topify.PNG" alt="Topify" style="width: 24px; height: 24px;">
-
-                                            </a>
-                                        </div>
-                                        <div class="ml-3 mt-2">
-                                            <h5 class="text-dark font-weight-medium mb-2">Topify</h5>
-                                            <p class="font-14 mb-2 text-muted">Read more information about it <br>
-                                            </p>
-                                            <span class="font-weight-light font-14 text-muted">10 Sessions left</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-start border-left-line">
-                                        <div>
-                                            <a href="javascript:void(0)" class="btn btn-cyan btn-circle mb-2 btn-item">
-                                                <img src="https://via.placeholder.com/100?text=No+Logo" alt="No Logo Available" style="width: 24px; height: 24px;">
-
-                                            </a>
-                                        </div>
-                                        <div class="ml-3 mt-2">
-                                            <h5 class="text-dark font-weight-medium mb-2">I-ACC
-                                            </h5>
-                                            <p class="font-14 mb-2 text-muted">Read more information about it</p>
-                                            <span class="font-weight-light font-14 mb-1 d-block text-muted">10 session left
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex align-items-start border-left-line">
-                                        <div>
-                                            <a href="javascript:void(0)" class="btn btn-cyan btn-circle mb-2 btn-item">
-                                                <img src="https://via.placeholder.com/100?text=No+Logo" alt="No Logo Available" style="width: 24px; height: 24px;">
-
-                                            </a>
-                                        </div>
-                                        <div class="ml-3 mt-2">
-                                            <h5 class="text-dark font-weight-medium mb-2">Aguka                                            </h5>
-                                            <p class="font-14 mb-2 text-muted">Read more information about it</p>
-                                            <span class="font-weight-light font-14 mb-1 d-block text-muted">10 session left
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- *************************************************************** -->
-                <!-- End Location and Earnings Charts Section -->
-                <!-- *************************************************************** -->
-                <!-- *************************************************************** -->
-                <!-- Start Top Leader Table -->
-                <!-- *************************************************************** -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-4">
-                                    <h4 class="card-title">Top Entrepreneurs</h4>
-                                    <div class="ml-auto">
-                                        <div class="dropdown sub-dropdown">
-                                            <button class="btn btn-link text-muted dropdown-toggle" type="button"
-                                                id="dd1" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false">
-                                                <i data-feather="more-vertical"></i>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
-                                                <a class="dropdown-item" href="#">Insert</a>
-                                                <a class="dropdown-item" href="#">Update</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table no-wrap v-middle mb-0">
-                                        <thead>
-                                            <tr class="border-0">
-                                                <th class="border-0 font-14 font-weight-medium text-muted">Entrepreneur's Name
-                                                </th>
-                                                <th class="border-0 font-14 font-weight-medium text-muted px-2">Program
-                                                </th>
-                                                <th class="border-0 font-14 font-weight-medium text-muted">Representatives</th>
-                                                <th class="border-0 font-14 font-weight-medium text-muted text-center">
-                                                    Status
-                                                </th>
-                                                <th class="border-0 font-14 font-weight-medium text-muted text-center">
-                                                    Duration in days
-                                                </th>
-                                                <th class="border-0 font-14 font-weight-medium text-muted">Jobs created</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="px-2 py-4">
-                                                    <div class="d-flex no-block align-items-center">
-                                                        <div class="mr-3"><img
-                                                                src="assets/im................"
-                                                                alt="user" class="rounded-circle" width="45"
-                                                                height="45" /></div>
-                                                        <div class="">
-                                                            <!-- <h5 class="text-dark mb-0 font-16 font-weight-medium">Janviere
-                                                                Muyenzi -->
-                                                            </h5>
-                                                            <!-- <span class="text-muted font-14">muyenzi@gmail.com</span> -->
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-muted px-2 py-4 font-14">***</td>
-                                                <td class="px-2 py-4">
-                                                    <div class="popover-icon">
-                                                        <a class="btn btn-primary rounded-circle btn-circle font-12"
-                                                            href="javascript:void(0)">***</a>
-                                                        <a class="btn btn-success text-white font-20 rounded-circle btn-circle"
-                                                            href="javascript:void(0)">***</a>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center px-2 py-4"><i
-                                                        class="fa fa-circle text-danger font-12" data-toggle="tooltip"
-                                                        data-placement="top" title="In Progress"></i></td>
-                                                <td class="text-center text-muted font-weight-medium px-2 py-4">***</td>
-                                                <td class="font-weight-medium text-dark px-2 py-4">***</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- *************************************************************** -->
-                <!-- End Top Leader Table -->
-                <!-- *************************************************************** -->
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer text-center text-muted">
-                Straight away from  <a
-                    href="bpn.com">BPN M&E Office</a>.
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
+            <!-- *************************************************************** -->
+            <!-- End Sales Charts Section -->
+            <!-- *************************************************************** -->
+            <!-- *************************************************************** -->
+            <!-- Start Location and Earnings Charts Section -->
+            <!-- *************************************************************** -->
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start">
+                                <h4 class="card-title mb-0">Programs Success Statistics</h4>
+                                <div class="ml-auto">
+                                    <div class="dropdown sub-dropdown">
+                                        <button class="btn btn-link text-muted dropdown-toggle" type="button" id="dd1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i data-feather="more-vertical"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
+                                            <a class="dropdown-item" href="#">Insert</a>
+                                            <a class="dropdown-item" href="#">Update</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-4 mb-5">
+                                <div class="stats ct-charts position-relative" style="height: 315px;"></div>
+                            </div>
+                            <ul class="list-inline text-center mt-4 mb-0">
+                                <li class="list-inline-item text-muted font-italic">Annual success Statistics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Ongoing programs</h4>
+                            <div class="mt-4 activity">
+                                <div class="d-flex align-items-start border-left-line pb-3">
+                                    <div>
+                                        <a href="javascript:void(0)" class="btn btn-info btn-circle mb-2 btn-item">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/120px-Mastercard-logo.svg.png"
+                                                alt="Mastercard Foundation" style="width: 24px; height: 24px;">
+
+                                        </a>
+                                    </div>
+                                    <div class="ml-3 mt-2">
+                                        <h5 class="text-dark font-weight-medium mb-2">MasterCard Foundation</h5>
+                                        <p class="font-14 mb-2 text-muted">Read more information about it
+                                        </p>
+                                        <span class="font-weight-light font-14 text-muted">10 Sessions left</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start border-left-line pb-3">
+                                    <div>
+                                        <a href="javascript:void(0)" class="btn btn-danger btn-circle mb-2 btn-item">
+                                            <img src="" alt="CORE" style="width: 24px; height: 24px;">
+
+                                        </a>
+                                    </div>
+                                    <div class="ml-3 mt-2">
+                                        <h5 class="text-dark font-weight-medium mb-2">CORE</h5>
+                                        <p class="font-14 mb-2 text-muted">Read more information about it <br>
+                                        </p>
+                                        <span class="font-weight-light font-14 text-muted">10 Sessions left</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start border-left-line">
+                                    <div>
+                                        <a href="javascript:void(0)" class="btn btn-cyan btn-circle mb-2 btn-item">
+                                            <img src="https://via.placeholder.com/100?text=No+Logo"
+                                                alt="No Logo Available" style="width: 24px; height: 24px;">
+
+                                        </a>
+                                    </div>
+                                    <div class="ml-3 mt-2">
+                                        <h5 class="text-dark font-weight-medium mb-2">I-ACC
+                                        </h5>
+                                        <p class="font-14 mb-2 text-muted">Read more information about it</p>
+                                        <span class="font-weight-light font-14 mb-1 d-block text-muted">10 session left
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-start border-left-line">
+                                    <div>
+                                        <a href="javascript:void(0)" class="btn btn-cyan btn-circle mb-2 btn-item">
+                                            <img src="https://via.placeholder.com/100?text=No+Logo"
+                                                alt="No Logo Available" style="width: 24px; height: 24px;">
+
+                                        </a>
+                                    </div>
+                                    <div class="ml-3 mt-2">
+                                        <h5 class="text-dark font-weight-medium mb-2">Aguka </h5>
+                                        <p class="font-14 mb-2 text-muted">Read more information about it</p>
+                                        <span class="font-weight-light font-14 mb-1 d-block text-muted">10 session left
+                                        </span>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- *************************************************************** -->
+            <!-- End Location and Earnings Charts Section -->
+            <!-- *************************************************************** -->
+            <!-- *************************************************************** -->
+            <!-- Start Top Leader Table -->
+            <!-- *************************************************************** -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-4">
+                                <h4 class="card-title">Top Entrepreneurs</h4>
+                                <div class="ml-auto">
+                                    <div class="dropdown sub-dropdown">
+                                        <button class="btn btn-link text-muted dropdown-toggle" type="button" id="dd1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i data-feather="more-vertical"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
+                                            <a class="dropdown-item" href="#">Insert</a>
+                                            <a class="dropdown-item" href="#">Update</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table no-wrap v-middle mb-0">
+                                    <thead>
+                                        <tr class="border-0">
+                                            <th class="border-0 font-14 font-weight-medium text-muted">Entrepreneur's
+                                                Name
+                                            </th>
+                                            <th class="border-0 font-14 font-weight-medium text-muted px-2">Program
+                                            </th>
+                                            <th class="border-0 font-14 font-weight-medium text-muted">Representatives
+                                            </th>
+                                            <th class="border-0 font-14 font-weight-medium text-muted text-center">
+                                                Status
+                                            </th>
+                                            <th class="border-0 font-14 font-weight-medium text-muted text-center">
+                                                Duration in days
+                                            </th>
+                                            <th class="border-0 font-14 font-weight-medium text-muted">Jobs created</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-2 py-4">
+                                                <div class="d-flex no-block align-items-center">
+                                                    <div class="mr-3"><img src="assets/im................" alt="user"
+                                                            class="rounded-circle" width="45" height="45" /></div>
+                                                    <div class="">
+                                                        <!-- <h5 class="text-dark mb-0 font-16 font-weight-medium">Janviere
+                                                                Muyenzi -->
+                                                        </h5>
+                                                        <!-- <span class="text-muted font-14">muyenzi@gmail.com</span> -->
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-muted px-2 py-4 font-14">***</td>
+                                            <td class="px-2 py-4">
+                                                <div class="popover-icon">
+                                                    <a class="btn btn-primary rounded-circle btn-circle font-12"
+                                                        href="javascript:void(0)">***</a>
+                                                    <a class="btn btn-success text-white font-20 rounded-circle btn-circle"
+                                                        href="javascript:void(0)">***</a>
+                                                </div>
+                                            </td>
+                                            <td class="text-center px-2 py-4"><i
+                                                    class="fa fa-circle text-danger font-12" data-toggle="tooltip"
+                                                    data-placement="top" title="In Progress"></i></td>
+                                            <td class="text-center text-muted font-weight-medium px-2 py-4">***</td>
+                                            <td class="font-weight-medium text-dark px-2 py-4">***</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- *************************************************************** -->
+            <!-- End Top Leader Table -->
+            <!-- *************************************************************** -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
+        <!-- End Container fluid  -->
         <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center text-muted">
+            Straight away from <a href="bpn.com">BPN M&E Office</a>.
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- End Wrapper -->
@@ -599,8 +596,8 @@
     <script src="assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="dist/js/pages/dashboards/dashboard1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    
+
+
 </body>
 
 </html>
